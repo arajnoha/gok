@@ -1,0 +1,214 @@
+:root {
+  --accent-color: tomato;
+  --color-light: #ccc;
+  --color-dark: #333;
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("JetBrainsMono-VariableFont_wght.ttf") format("truetype");
+
+}
+html,body,div,p,span,ul,li,img,h1,h2,h3,h4,b,u,i,button {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+    font-family: "JetBrains Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+  #library {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
+  #library-artists {
+    width: 280px;
+    height: 100%;
+    overflow: auto;
+    background-color: #fff;
+    border-right: 1px solid var(--color-light);
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-shrink: 0;
+  }
+  .artist {
+    cursor: pointer;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-size: 13px;
+    line-height: 18px;
+    color: var(--color-dark);
+    padding: 5px;
+    display: flex;
+    flex-shrink: 0;
+  }
+  .artist.highlight,
+  .artist:hover {
+    color: var(--color-light);
+    background-color: var(--color-dark);
+  }
+
+  #library-right-pane {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #library-albums {
+    background-color: #fff;
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 16px;
+    overflow-x: auto;
+  }
+  .album {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 140px;
+  }
+  .album img {
+    width: 140px;
+    height: 140px;
+    border-radius: 0;
+    object-fit: cover;
+    filter: grayscale(1);
+    position: relative;
+  }
+
+  .album h4 {
+    font-size: 11px;
+    line-height: 16px;
+    font-weight: 400;
+  }
+  .album.highlight img {
+    border: 2px solid var(--color-dark);
+  }
+
+  #library-songs {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    overflow: auto;
+  }
+  .song {
+    background-color: #fff;
+    cursor: pointer;
+    display: flex;
+    padding: 8px;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    line-height: 18px;
+    transition: background-color 120ms ease-in-out;
+  }
+  .song:first-child {
+    border-top: 1px solid #ddd;
+  }
+  .song:hover,
+  .song.highlight,
+  .song.current {
+    color: var(--color-light);
+    background-color: var(--color-dark);
+  }
+  .song .time {
+    margin-left: auto;
+    margin-right: 12px;
+  }
+  
+  #player-controls {
+    padding: 20px;
+  }
+  
+  #progress-container {
+    width: 100%;
+    background-color: #f3f3f3;
+    cursor: pointer;
+  }
+  
+  #progress-bar {
+    width: 0;
+    height: 5px;
+    background-color: #ccc;
+  }
+
+  #time-and-progress {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0 10px;
+    flex-grow: 1;
+  }
+  
+  #time-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+  }
+  #current {
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  #buttons button {
+    background: transparent;
+    color: var(--color-dark)
+  }
+
+  #current-track,
+  #current-time,
+  #total-time {
+    height: 22px;
+    font-size: 11px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #queue {
+    display: none;
+  }
+
+  button {
+    background: var(--color-dark);
+    color: var(--color-light);
+    border: 0;
+    outline: 0;
+    box-shadow: 0;
+    padding: 3px 7px;
+    font-family: "JetBrains Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  footer {
+    width: 100%;
+    background-color: var(--color-dark);
+  }
+  
+  dialog {
+    width: 400px;
+  }
+  dialog::backdrop {
+    background: rgba(0,0,0,0.5);
+  }

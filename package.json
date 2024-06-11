@@ -1,0 +1,43 @@
+{
+  "name": "gok",
+  "version": "1.0.0",
+  "author": "Adam Rajnoha",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --mac --win --linux"
+  },
+  "dependencies": {
+    "electron-store": "^9.0.0",
+    "howler": "^2.2.4",
+    "music-metadata": "^8.3.0"
+  },
+  "devDependencies": {
+    "electron": "^30.0.9",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.example.gok",
+    "productName": "Gok",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "src/*",
+      "package.json"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "src/gok.ico"
+    },
+    "mac": {
+      "target": "dmg",
+      "icon": "src/gok.icns"
+    },
+    "linux": {
+      "target": "AppImage",
+      "icon": "src/gok.png"
+    }
+  }
+  
+}

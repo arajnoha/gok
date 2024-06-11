@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gok</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <div id="current">
+    <div id="buttons">
+      <button id="play">Play</button>
+    <button id="pause">Pause</button>
+    <button id="stop">Stop</button>
+    <button id="next">Next</button>
+    <button id="prev">Previous</button>
+    </div>
+    <div id="time-and-progress">
+      
+      <div id="progress-container">
+        <div id="current-track">-</div>
+        <div id="progress-bar"></div>
+      </div>
+      <div id="current-time">0:00</div>/<div id="total-time">0:00</div>
+    </div>
+ </div>
+
+  <div id="library">
+    <div id="library-artists"></div>
+    <div id="library-right-pane">
+      <div id="library-albums"></div>
+      <div id="library-songs"></div>
+    </div>
+  </div>
+  <div id="queue"></div>
+
+  <footer>
+    <button id="import-music">(Re)Import Music</button>
+    <button id="contact">Credit&About</button>
+  </footer>
+
+  <dialog id="dialog">
+    <button id="close-dialog">X</button>
+    <p>This music player is made by Adam Rajnoha (adam@rajnoha.com) as a version 1.0</p>
+    <p>It's part of the grayscale software bundle. Happy listening!</p>
+  </dialog>
+  <script src="renderer.js"></script>
+</body>
+</html>
