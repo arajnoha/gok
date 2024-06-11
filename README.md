@@ -2,9 +2,9 @@
 ![Screenshot of Gok music player](screenshot.png)
 
 ### Download:
-- macOS: [Gok-1.0.0-arm64.dmg]()
-- Windows: [Gok Setup 1.0.0.exe]()
-- GNU/Linux: [Gok-1.0.0-arm64.AppImage]()
+- macOS: [Gok-1.0.0-arm64.dmg](https://github.com/arajnoha/gok/releases/download/v1.0.0/Gok-1.0.0-arm64.dmg)
+- Windows: [Gok Setup 1.0.0.exe](https://github.com/arajnoha/gok/releases/download/v1.0.0/Gok.Setup.1.0.0.exe)
+- GNU/Linux: [Gok-1.0.0-arm64.AppImage](https://github.com/arajnoha/gok/releases/download/v1.0.0/Gok-1.0.0-arm64.AppImage)
 
 ### How to use
 Simply choose a folder from which you want to Import the music using the button at the bottom left. Gok will keep the files where they are and just form its own log of it. Gok is un-opinionated so the title, artwork, song numbers and other details are directly read grom song metadata (ID3 Tags).
